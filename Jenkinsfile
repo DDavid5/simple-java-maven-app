@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -D skipTests clean package'
+                                // Print Java and Maven version for debugging
+                sh 'java -version'
+                sh 'mvn -version'
             }
         }
     }
