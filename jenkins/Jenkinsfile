@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    
+    tools {
+        maven 'Maven_DD' // Name of the Maven installation configured in Jenkins
+    }
     stages {
         stage('Build') {
             steps {
